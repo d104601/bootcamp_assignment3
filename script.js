@@ -17,20 +17,23 @@ function generatePassword() {
 // function to get password length from prompt
 function getPasswordLength() {
   var length;
-  while(1)
+  length = window.prompt("Password length?");
+
+  while(length < 8 || length > 128)
   {
+    if(length < 8) {
+      window.alert("Password length must be at least 8.");
+    }
+    else if(length > 128) {
+      window.alert("Password length must be no more than 128.");
+
+    }
     length = window.prompt("Password length?");
-    
-    if(length >= 8 || length <= 128) {
-      return length;
-    }
-    else {
-      window.alert("Password length must be at least 8 and no more than 128.");
-    }
   }
+  return length;
 }
 
-// function to get characterlist for password criteria
+// function to get characterlist as password criteria selected
 function getCharacterList() {
   var characters = "";
   
