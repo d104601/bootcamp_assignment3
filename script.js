@@ -26,7 +26,6 @@ function getPasswordLength() {
     }
     else if(length > 128) {
       window.alert("Password length must be no more than 128.");
-
     }
     length = window.prompt("Password length?");
   }
@@ -37,7 +36,7 @@ function getPasswordLength() {
 function getCharacterList() {
   var characters = "";
   
-  while(1){
+  while(characters.length == 0){
     var question = window.confirm("Include uppercase?")
     if(question){
       characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -57,10 +56,10 @@ function getCharacterList() {
     if(characters.length == 0) {
       window.alert("You should include at least one criteria");
     }
-    else {
-      return characters;
-    }
+    
   }
+
+  return characters;
 }
 
 // Get references to the #generate element
