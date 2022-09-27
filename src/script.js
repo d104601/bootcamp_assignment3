@@ -56,7 +56,6 @@ function getCharacterList() {
     if(characters.length == 0) {
       window.alert("You should include at least one criteria");
     }
-    
   }
 
   return characters;
